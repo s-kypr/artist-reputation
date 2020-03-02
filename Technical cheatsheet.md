@@ -6,6 +6,8 @@
   - `ssh kypraiou@iccluster111.iccluster.epfl.ch` (without GPU)
   - `ssh kypraiou@iccluster053.iccluster.epfl.ch` (with GPU)
   
+2. Datasets located: `/dlabdata1/kypraiou`
+  
 2. Access the datasets in the HDFS (hadoop cluster)
    - list of datasets:`hadoop fs -ls /datasets`
    - wikipedia datasets: 
