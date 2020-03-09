@@ -14,10 +14,12 @@
 - cluster to local: `scp kypraiou@iccluster111.iccluster.epfl.ch:~/icfiler/{name}.py ./`
 
 
-----------------------------------------------------
-  
-2. Access the datasets in the HDFS (hadoop cluster)
-   - list of datasets:`hadoop fs -ls /datasets`
+## Connecting to big-data cluster
+
+3. login to hadoop cluster: `ssh kypraiou@hadoop.iccluster.epfl.ch `
+
+4. Access the datasets in the HDFS (hadoop cluster)
+   - list of datasets:`hadoop fs -ls /user/kypraiou`
    - wikipedia datasets: 
      - `hadoop fs -ls /datasets/wikidatawiki`
        - /datasets/wikidatawiki/wikidatawiki-20170301-pages-articles-multistream-index.txt
@@ -30,3 +32,7 @@
 
 - To transfer files from local to cluster:
 `hadoop fs -put {filename.txt}  `
+
+## Run the files in the custer
+
+`spark-submit --master yarn --packages com.databricks:spark-xml_2.11:0.7.0 --num-executors 70 --executor-memory 6g get_wikidata.py` (took 45 min) 
