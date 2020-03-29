@@ -33,3 +33,5 @@
 ## Run the files in the custer
 
 `spark-submit --master yarn --packages com.databricks:spark-xml_2.11:0.7.0 --num-executors 70 --executor-memory 6g get_wikidata.py` (took 45 min) 
+
+- monitor your running Hadoop and Spark jobs: http://iccluster075.iccluster.epfl.ch:8088/cluster/apps
