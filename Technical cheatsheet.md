@@ -10,13 +10,16 @@
 
 ## Transfering the files
 
-- local to cluster: `scp ./get_wikidata.py  kypraiou@iccluster111.iccluster.epfl.ch:~/icfiler`
-- cluster to local: `scp kypraiou@iccluster111.iccluster.epfl.ch:~/icfiler/{name}.py ./`
+- local to cluster: `scp ./get_wikidata.py  kypraiou@iccluster111.iccluster.epfl.ch:~/`
+- cluster to local: `scp kypraiou@iccluster111.iccluster.epfl.ch:~/{name}.py ./`
 
 
 ## Connecting to big-data cluster
 
-3. login to hadoop cluster: `ssh kypraiou@hadoop.iccluster.epfl.ch `
+1. login to hadoop cluster: `ssh kypraiou@hadoop.iccluster.epfl.ch `
+
+2. To transfer files from local to cluster:
+`hadoop fs -put {filename.txt} ` 
 
 4. Access the datasets in the HDFS (hadoop cluster)
    - list of datasets:`hadoop fs -ls /user/kypraiou`
@@ -27,8 +30,7 @@
 4. To  read the first 100 lines `hadoop fs -cat /user/kypraiou/<file_name> | head -n 100`
 5. To copy the output to your own space in the cluster: `hadoop fs -cat /datasets/enwiki-20191001/enwiki-20191001-pages-articles-multistream.xml | head -n 200 > ~/enwiki_200_lines.txt`
 
-- To transfer files from local to cluster:
-`hadoop fs -put {filename.txt}  `
+`
 
 ## Run the files in the custer
 
