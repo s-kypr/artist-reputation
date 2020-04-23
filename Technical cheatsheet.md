@@ -21,6 +21,9 @@
 2. To transfer files from local to cluster:
 `hadoop fs -put {filename.txt} ` 
 
+3. To tranfer files from cluster to local:
+`hadoop fs -getmerge artists.json artists.json`
+
 4. Access the datasets in the HDFS (hadoop cluster)
    - list of datasets:`hadoop fs -ls /user/kypraiou`
    - wikipedia datasets: 
