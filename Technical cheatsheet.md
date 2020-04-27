@@ -13,6 +13,16 @@
 - local to cluster: `scp ./get_wikidata.py  kypraiou@iccluster111.iccluster.epfl.ch:~/`
 - cluster to local: `scp kypraiou@iccluster111.iccluster.epfl.ch:~/{name}.py ./`
 
+## Running notebooks in the iccluster 111
+
+- run `jupyter notebook`
+  - the notebook can be found at: [http://iccluster111.iccluster.epfl.ch:5131](http://iccluster111.iccluster.epfl.ch:5131)
+
+- to close forgotten notebook:
+  - see list of running notebooks: `jupyter notebook list` (get jupyter used port-number - usually 5131)
+  - run `lsof -n -i4TCP:[port-number]` to get PID (second field in the output)
+  - run `kill -9 [PID]` to kill this process.
+
 
 ## Connecting to big-data cluster
 
